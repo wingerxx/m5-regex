@@ -64,16 +64,16 @@ public class Main {
 
     // Method 3 for checking if a string conforms to a regex: using String.matches
 
-    // TODO: Modify this method to check whether or not the string contains the same capital letter
-    //       twice. For example "Amazing Apple" contains "A" twice. If the string does repeat the same
-    //       capital letter twice, the method should return true. Otherwise it should return false.
-
     /**
      * Checks whether a given string contains the same capital letter twice.
      * @param str the string to look for doubles in
      * @return whether str contains the same capital letter twice.
      */
     public static boolean checkForDoubles(String str) {
-        return str.matches("replace with correct regex");
+        if (str == null) {
+            return false;
+        }
+        // Matches any string containing a capital letter that appears again later
+        return str.matches(".*([A-Z]).*\\1.*");
     }
 }
